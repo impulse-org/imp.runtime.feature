@@ -10,7 +10,7 @@
 	</target>
 
 	<target name="all.plugins"
-		depends="build.shrike,build.smapi,build.smapifier,build.jikespg,build.polyglot2,build.uide.runtime,build.safari.xform">
+		depends="build.shrike,build.smapi,build.smapifier,build.jikespg,build.polyglot2,build.uide.runtime,build.safari.xform,build.safari.runtime">
 	</target>
 
 	<target name="build.feature.jar" depends="init" description="Build the feature jar for SAFARI for an update site.">
@@ -50,6 +50,7 @@
 		<copy todir="plugins" file="../com.ibm.watson.smapi/com.ibm.watson.smapi_${feature.version}.jar"/>
 		<copy todir="plugins" file="../com.ibm.watson.smapifier/com.ibm.watson.smapifier_${feature.version}.jar"/>
 		<copy todir="plugins" file="../com.ibm.watson.safari.xform/com.ibm.watson.safari.xform_${feature.version}.jar"/>
+		<copy todir="plugins" file="../org.eclipse.safari.runtime/org.eclipse.safari.runtime_${feature.version}.jar"/>
 	</target>
 
 	<!-- ========================================================================================= -->
@@ -60,7 +61,7 @@
 		</antcall>
 	</target>
 
-	<target name="build.smapi">
+	<target name="build.smapi" depends="build.shrike">
 		<antcall target="build.child">
 			<param name="plugin.id" value="com.ibm.watson.smapi"/>
 		</antcall>
@@ -91,6 +92,12 @@
 	</target>
 
 	<target name="build.safari.xform" depends="build.jikespg,build.uide.runtime">
+		<antcall target="build.child">
+			<param name="plugin.id" value="com.ibm.watson.safari.xform"/>
+		</antcall>
+	</target>
+
+	<target name="build.safari.runtime" depends="build.polyglot2,build.safari.xform,build.smapifier">
 		<antcall target="build.child">
 			<param name="plugin.id" value="com.ibm.watson.safari.xform"/>
 		</antcall>
