@@ -76,7 +76,7 @@
 
 	<target name="build.safari.runtime" depends="build.polyglot2,build.safari.xform,build.smapifier">
 		<antcall target="build.child">
-			<param name="plugin.id" value="com.ibm.watson.safari.xform"/>
+			<param name="plugin.id" value="org.eclipse.safari.runtime"/>
 		</antcall>
 	</target>
 </project>
