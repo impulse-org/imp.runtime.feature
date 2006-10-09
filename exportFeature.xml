@@ -44,7 +44,7 @@
 		</antcall>
 	</target>
 
-	<target name="build.smapifier" depends="build.smapi">
+	<target name="build.smapifier" depends="build.smapi,build.uide.runtime">
 		<antcall target="build.child">
 			<param name="plugin.id" value="com.ibm.watson.smapifier"/>
 		</antcall>
