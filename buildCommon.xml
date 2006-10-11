@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="updcommon" basedir=".">
+<project name="runtimeCommon" basedir=".">
     <property name="basews" value="${ws}"/>
     <property name="baseos" value="${os}"/>
     <property name="basearch" value="${arch}"/>
@@ -16,6 +16,13 @@
     <echo message="java.home = ${java.home}"/>
     <echo message="ant.home = ${ant.home}"/>
     <echo message="eclipse.home = ${eclipse.home}"/>
+
+    <!-- Following assumes we're invoking the build from within some plugin project's top-level directory -->
+    <xmlproperty file="../org.eclipse.safari.runtime.feature/feature.xml" prefix="runtime"/>
+
+    <echo message="Building for SAFARI Runtime feature version ${runtime.feature(version)}"/>
+
+    <property name="runtime.version" value="${runtime.feature(version)}"/>
 
     <path id="path_bootclasspath">
         <fileset dir="${java.home}/lib">
