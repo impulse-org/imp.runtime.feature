@@ -11,7 +11,7 @@
 	</target>
 
 	<target name="all.plugins"
-		depends="build.shrike,build.smapi,build.smapifier,build.jikespg,build.polyglot2,build.uide.runtime,build.safari.xform,build.safari.runtime">
+		depends="build.shrike,build.smapi,build.smapifier,build.lpg,build.polyglot2,build.uide.runtime,build.jikespg.runtime,build.safari.xform,build.safari.runtime">
 	</target>
 
 	<!-- RMF Copy the plugin jars to the 'plugins' folder so that exportUpdate script can see it -->
@@ -22,6 +22,7 @@
 		<mkdir dir="plugins"/>
 		<copy todir="plugins" file="../com.ibm.shrike/com.ibm.shrike_${feature.version}.jar"/>
 		<copy todir="plugins" file="../org.eclipse.uide.runtime/org.eclipse.uide.runtime_${feature.version}.jar"/>
+		<copy todir="plugins" file="../org.eclipse.safari.jikespg.runtime/org.eclipse.safari.jikespg.runtime_${feature.version}.jar"/>
 		<copy todir="plugins" file="../lpg/lpg_${feature.version}.jar"/>
 		<copy todir="plugins" file="../polyglot2/polyglot2_${feature.version}.jar"/>
 		<copy todir="plugins" file="../com.ibm.watson.smapi/com.ibm.watson.smapi_${feature.version}.jar"/>
@@ -50,15 +51,21 @@
 		</antcall>
 	</target>
 
-	<target name="build.uide.runtime" depends="build.smapi,build.jikespg">
+	<target name="build.uide.runtime" depends="build.lpg,build.smapi">
 		<antcall target="build.child">
 			<param name="plugin.id" value="org.eclipse.uide.runtime"/>
 		</antcall>
 	</target>
 
-	<target name="build.jikespg">
+	<target name="build.lpg">
 		<antcall target="build.child">
 			<param name="plugin.id" value="lpg"/>
+		</antcall>
+	</target>
+
+	<target name="build.jikespg.runtime" depends="build.lpg,build.smapifier">
+		<antcall target="build.child">
+			<param name="plugin.id" value="org.eclipse.safari.jikespg.runtime"/>
 		</antcall>
 	</target>
 
@@ -68,7 +75,7 @@
 		</antcall>
 	</target>
 
-	<target name="build.safari.xform" depends="build.jikespg,build.uide.runtime">
+	<target name="build.safari.xform" depends="build.lpg,build.uide.runtime,build.jikespg.runtime">
 		<antcall target="build.child">
 			<param name="plugin.id" value="com.ibm.watson.safari.xform"/>
 		</antcall>
