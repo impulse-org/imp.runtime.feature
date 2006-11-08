@@ -63,7 +63,7 @@
 		</antcall>
 	</target>
 
-	<target name="build.jikespg.runtime" depends="build.lpg,build.smapifier">
+	<target name="build.jikespg.runtime" depends="build.lpg,build.smapifier,build.safari.xform">
 		<antcall target="build.child">
 			<param name="plugin.id" value="org.eclipse.safari.jikespg.runtime"/>
 		</antcall>
@@ -75,7 +75,7 @@
 		</antcall>
 	</target>
 
-	<target name="build.safari.xform" depends="build.lpg,build.uide.runtime,build.jikespg.runtime">
+	<target name="build.safari.xform" depends="build.lpg,build.uide.runtime">
 		<antcall target="build.child">
 			<param name="plugin.id" value="com.ibm.watson.safari.xform"/>
 		</antcall>
