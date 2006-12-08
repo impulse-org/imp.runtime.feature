@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.safari.runtime"
       label="SAFARI Runtime"
-      version="1.0.40"
+      version="1.0.41"
       provider-name="rfuhrer@watson.ibm.com">
 
    <description url="http://orquesta.watson.ibm.com/safari">
@@ -24,32 +24,36 @@ except any specific purpose.
       <update label="SAFARI Update Site" url="http://orquesta.watson.ibm.com/eclipse/updates/SAFARI/"/>
    </url>
 
+   <requires>
+      <import feature="polyglot2" version="2.0.0" match="greaterOrEqual"/>
+   </requires>
+
    <plugin
          id="org.eclipse.uide.runtime"
          download-size="0"
          install-size="0"
-         version="1.0.40"
+         version="1.0.41"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.safari.xform"
          download-size="0"
          install-size="0"
-         version="1.0.40"
+         version="1.0.41"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.smapi"
          download-size="0"
          install-size="0"
-         version="1.0.40"
+         version="1.0.41"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.smapifier"
          download-size="0"
          install-size="0"
-         version="1.0.40"
+         version="1.0.41"
          unpack="false"/>
 
    <plugin
@@ -60,23 +64,16 @@ except any specific purpose.
          unpack="false"/>
 
    <plugin
-         id="polyglot2"
-         download-size="0"
-         install-size="0"
-         version="1.0.40"
-         unpack="false"/>
-
-   <plugin
          id="lpg"
          download-size="0"
          install-size="0"
-         version="1.0.40"/>
+         version="1.0.41"/>
 
    <plugin
          id="org.eclipse.safari.runtime"
          download-size="0"
          install-size="0"
-         version="1.0.40"
+         version="1.0.41"
          unpack="false"/>
 
 </feature>
