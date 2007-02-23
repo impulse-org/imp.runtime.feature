@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.safari.runtime"
       label="SAFARI Runtime"
-      version="1.0.45"
+      version="1.0.46"
       provider-name="rfuhrer@watson.ibm.com">
 
    <description url="http://orquesta.watson.ibm.com/safari">
@@ -25,36 +25,36 @@ except any specific purpose.
    </url>
 
    <requires>
-      <import feature="polyglot" version="2.1.0" match="equivalent"/>
-      <import feature="lpg.runtime.feature" version="2.0.0" match="perfect"/>
+      <import feature="polyglot" version="2.2.0" match="equivalent"/>
+      <import feature="lpg.runtime.feature" version="2.0.1" match="perfect"/>
    </requires>
 
    <plugin
          id="org.eclipse.uide.runtime"
          download-size="0"
          install-size="0"
-         version="1.0.45"
+         version="1.0.46"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.safari.xform"
          download-size="0"
          install-size="0"
-         version="1.0.45"
+         version="1.0.46"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.smapi"
          download-size="0"
          install-size="0"
-         version="1.0.45"
+         version="1.0.46"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.smapifier"
          download-size="0"
          install-size="0"
-         version="1.0.45"
+         version="1.0.46"
          unpack="false"/>
 
    <plugin
@@ -68,7 +68,7 @@ except any specific purpose.
          id="org.eclipse.safari.runtime"
          download-size="0"
          install-size="0"
-         version="1.0.45"
+         version="1.0.46"
          unpack="false"/>
 
 </feature>
