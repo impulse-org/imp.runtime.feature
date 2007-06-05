@@ -11,7 +11,7 @@
 	</target>
 
 	<target name="all.plugins"
-		depends="build.shrike,build.smapi,build.smapifier,build.uide.runtime,build.jikespg.runtime,build.safari.xform,build.safari.runtime">
+		depends="build.shrike,build.smapi,build.smapifier,build.uide.runtime,build.jikespg.runtime,build.safari.xform,build.safari.analysis,build.safari.runtime">
 	</target>
 
 	<!-- RMF Copy the plugin jars to the 'plugins' folder so that exportUpdate script can see it -->
@@ -26,6 +26,7 @@
 		<copy todir="plugins" file="../com.ibm.watson.smapi/com.ibm.watson.smapi_${feature.version}.jar"/>
 		<copy todir="plugins" file="../com.ibm.watson.smapifier/com.ibm.watson.smapifier_${feature.version}.jar"/>
 		<copy todir="plugins" file="../com.ibm.watson.safari.xform/com.ibm.watson.safari.xform_${feature.version}.jar"/>
+		<copy todir="plugins" file="../org.eclipse.safari.analysis/org.eclipse.safari.analysis_${feature.version}.jar"/>
 		<copy todir="plugins" file="../org.eclipse.safari.runtime/org.eclipse.safari.runtime_${feature.version}.jar"/>
 	</target>
 
@@ -64,6 +65,12 @@
 	<target name="build.safari.xform" depends="build.uide.runtime">
 		<antcall target="build.child">
 			<param name="plugin.id" value="com.ibm.watson.safari.xform"/>
+		</antcall>
+	</target>
+
+	<target name="build.safari.analysis" depends="build.uide.runtime">
+		<antcall target="build.child">
+			<param name="plugin.id" value="org.eclipse.safari.analysis"/>
 		</antcall>
 	</target>
 
