@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.safari.runtime"
       label="%featureName"
-      version="1.0.53"
+      version="1.0.54"
       provider-name="%providerName"
       image="eclipse_update_120.jpg">
 
@@ -27,28 +27,28 @@
          id="org.eclipse.uide.runtime"
          download-size="0"
          install-size="0"
-         version="1.0.53"
+         version="1.0.54"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.safari.xform"
          download-size="0"
          install-size="0"
-         version="1.0.53"
+         version="1.0.54"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.smapi"
          download-size="0"
          install-size="0"
-         version="1.0.53"
+         version="1.0.54"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.smapifier"
          download-size="0"
          install-size="0"
-         version="1.0.53"
+         version="1.0.54"
          unpack="false"/>
 
    <plugin
@@ -62,14 +62,14 @@
          id="org.eclipse.safari.runtime"
          download-size="0"
          install-size="0"
-         version="1.0.53"
+         version="1.0.54"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.safari.analysis"
          download-size="0"
          install-size="0"
-         version="1.0.53"
+         version="1.0.54"
          unpack="false"/>
 
 </feature>
