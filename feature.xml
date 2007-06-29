@@ -19,8 +19,8 @@
    </url>
 
    <requires>
-      <import feature="polyglot" version="2.2.0" match="equivalent"/>
-      <import feature="lpg.runtime" version="2.0.3"/>
+      <import feature="polyglot" version="2.2.2" match="equivalent"/>
+      <import feature="lpg.runtime" version="2.0.5"/>
    </requires>
 
    <plugin
