@@ -18,9 +18,9 @@
     <echo message="eclipse.home = ${eclipse.home}"/>
 
     <!-- Following assumes we're invoking the build from within some plugin project's top-level directory -->
-    <xmlproperty file="../org.eclipse.safari.runtime.feature/feature.xml" prefix="runtime"/>
+    <xmlproperty file="../org.eclipse.imp.runtime.feature/feature.xml" prefix="runtime"/>
 
-    <echo message="Building for SAFARI Runtime feature version ${runtime.feature(version)}"/>
+    <echo message="Building for IMP Runtime feature version ${runtime.feature(version)}"/>
 
     <property name="runtime.version" value="${runtime.feature(version)}"/>
 
@@ -35,7 +35,7 @@
 
     <property name="bootclasspath" refid="path_bootclasspath"/>
 
-    <condition property="eclipse.home" value="/usr/lib/eclipse-3.1">
+    <condition property="eclipse.home" value="/usr/lib/eclipse-3.2">
         <and>
             <not>
 	        <isset property="eclipse.home"/>
@@ -44,7 +44,7 @@
 	</and>
     </condition>
 
-    <condition property="eclipse.home" value="f:/eclipse-3.1.2">
+    <condition property="eclipse.home" value="f:/eclipse-3.2.2">
         <and>
             <not>
 	        <isset property="eclipse.home"/>
@@ -58,5 +58,5 @@
             <include name="**/*.jar"/>
         </fileset>
     </path>
-    <pathconvert property="eclipse.build.path" refid="path_eclipse.build.path" targetos="unix"/>
+    <pathconvert property="eclipse.build.path" refid="path_eclipse.build.path" targetos="windows"/>
 </project>

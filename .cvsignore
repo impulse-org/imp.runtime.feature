@@ -1,2 +1,3 @@
 plugins
 org.eclipse.safari.runtime_*.jar
+org.eclipse.imp.runtime_*.jar
