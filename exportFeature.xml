@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="org.eclipse.safari.runtime.feature" default="build.feature.jar" basedir=".">
-	<import file="../org.eclipse.safari.runtime.feature/buildCommon.xml"/>
-	<import file="../org.eclipse.safari.update/buildFeatureCommon.xml"/>
+<project name="org.eclipse.imp.runtime.feature" default="build.feature.jar" basedir=".">
+	<import file="../org.eclipse.imp.runtime.feature/buildCommon.xml"/>
+	<import file="../org.eclipse.imp.update/buildFeatureCommon.xml"/>
 
 	<target name="init">
-		<property name="feature.name"        value="org.eclipse.safari.runtime"/>
+		<property name="feature.name"        value="org.eclipse.imp.runtime"/>
 		<property name="feature.version"     value="${runtime.version}"/>
 		<property name="feature.temp.folder" value="${basedir}/feature.temp.folder"/>
 		<property name="feature.destination" value="${basedir}"/>
 	</target>
-
+	
 	<target name="all.plugins"
-		depends="build.shrike,build.smapi,build.smapifier,build.uide.runtime,build.jikespg.runtime,build.safari.xform,build.safari.analysis,build.safari.runtime">
+		depends="build.shrike,build.smapi,build.smapifier,build.imp.runtime,build.lpg.runtime,build.imp.xform,build.imp.analysis">
 	</target>
 
 	<!-- RMF Copy the plugin jars to the 'plugins' folder so that exportUpdate script can see it -->
@@ -20,21 +20,20 @@
 			<fileset dir="plugins" includes="*.jar"/>
 		</delete>
 		<mkdir dir="plugins"/>
-		<copy todir="plugins" file="../com.ibm.shrike/com.ibm.shrike_1.0.0.jar"/>
-		<copy todir="plugins" file="../org.eclipse.uide.runtime/org.eclipse.uide.runtime_${feature.version}.jar"/>
-		<copy todir="plugins" file="../org.eclipse.safari.jikespg.runtime/org.eclipse.safari.jikespg.runtime_${feature.version}.jar"/>
-		<copy todir="plugins" file="../com.ibm.watson.smapi/com.ibm.watson.smapi_${feature.version}.jar"/>
-		<copy todir="plugins" file="../com.ibm.watson.smapifier/com.ibm.watson.smapifier_${feature.version}.jar"/>
-		<copy todir="plugins" file="../com.ibm.watson.safari.xform/com.ibm.watson.safari.xform_${feature.version}.jar"/>
-		<copy todir="plugins" file="../org.eclipse.safari.analysis/org.eclipse.safari.analysis_${feature.version}.jar"/>
-		<copy todir="plugins" file="../org.eclipse.safari.runtime/org.eclipse.safari.runtime_${feature.version}.jar"/>
+		<copy todir="plugins" file="../com.ibm.wala.shrike/com.ibm.wala.shrike_1.0.0.jar"/>
+		<copy todir="plugins" file="../org.eclipse.imp.runtime/org.eclipse.imp.runtime_${plugins.version.32}.jar"/>
+		<copy todir="plugins" file="../org.eclipse.imp.lpg.runtime/org.eclipse.imp.lpg.runtime_${plugins.version.31}.jar"/>
+		<copy todir="plugins" file="../com.ibm.watson.smapi/com.ibm.watson.smapi_${plugins.version.31}.jar"/>
+		<copy todir="plugins" file="../com.ibm.watson.smapifier/com.ibm.watson.smapifier_${plugins.version.31}.jar"/>
+		<copy todir="plugins" file="../org.eclipse.imp.xform/org.eclipse.imp.xform_${plugins.version.31}.jar"/>
+		<copy todir="plugins" file="../org.eclipse.imp.analysis/org.eclipse.imp.analysis_${plugins.version.31}.jar"/>
 	</target>
 
 	<!-- ========================================================================================= -->
 
 	<target name="build.shrike">
 		<antcall target="build.child">
-			<param name="plugin.id" value="com.ibm.shrike"/>
+			<param name="plugin.id" value="com.ibm.wala.shrike"/>
 		</antcall>
 	</target>
 
@@ -44,39 +43,33 @@
 		</antcall>
 	</target>
 
-	<target name="build.smapifier" depends="build.smapi,build.uide.runtime">
+	<target name="build.smapifier" depends="build.smapi,build.imp.runtime">
 		<antcall target="build.child">
 			<param name="plugin.id" value="com.ibm.watson.smapifier"/>
 		</antcall>
 	</target>
 
-	<target name="build.uide.runtime" depends="build.smapi">
+	<target name="build.imp.runtime" depends="build.smapi">
 		<antcall target="build.child">
-			<param name="plugin.id" value="org.eclipse.uide.runtime"/>
+			<param name="plugin.id" value="org.eclipse.imp.runtime"/>
 		</antcall>
 	</target>
 
-	<target name="build.jikespg.runtime" depends="build.smapifier,build.safari.xform">
+	<target name="build.lpg.runtime" depends="build.smapifier,build.imp.xform,build.imp.runtime">
 		<antcall target="build.child">
-			<param name="plugin.id" value="org.eclipse.safari.jikespg.runtime"/>
+			<param name="plugin.id" value="org.eclipse.imp.lpg.runtime"/>
 		</antcall>
 	</target>
 
-	<target name="build.safari.xform" depends="build.uide.runtime">
+	<target name="build.imp.xform" depends="build.imp.runtime">
 		<antcall target="build.child">
-			<param name="plugin.id" value="com.ibm.watson.safari.xform"/>
+			<param name="plugin.id" value="org.eclipse.imp.xform"/>
 		</antcall>
 	</target>
 
-	<target name="build.safari.analysis" depends="build.uide.runtime">
+	<target name="build.imp.analysis" depends="build.imp.runtime">
 		<antcall target="build.child">
-			<param name="plugin.id" value="org.eclipse.safari.analysis"/>
-		</antcall>
-	</target>
-
-	<target name="build.safari.runtime" depends="build.safari.xform,build.smapifier">
-		<antcall target="build.child">
-			<param name="plugin.id" value="org.eclipse.safari.runtime"/>
+			<param name="plugin.id" value="org.eclipse.imp.analysis"/>
 		</antcall>
 	</target>
 </project>
