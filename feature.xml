@@ -67,9 +67,9 @@
 
    <plugin
          id="org.eclipse.imp.lpg.runtime"
-         download-size="461"
-         install-size="461"
-         version="1.0.65"
+         download-size="0"
+         install-size="0"
+         version="1.0.64"
          unpack="false"/>
 
 </feature>
