@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.imp.runtime"
       label="%featureName"
-      version="3.2.63"
+      version="3.2.64"
       provider-name="%providerName"
       image="eclipse_update_120.jpg">
 
@@ -19,29 +19,29 @@
    </url>
 
    <requires>
-      <import feature="polyglot" version="2.2.3" match="equivalent"/>
-      <import feature="lpg.runtime" version="2.0.6"/>
+      <import feature="polyglot" version="2.2.3" match="greaterOrEqual"/>
+      <import feature="lpg.runtime" version="2.0.7"/>
    </requires>
 
    <plugin
          id="org.eclipse.imp.runtime"
          download-size="430"
          install-size="430"
-         version="3.2.63"
+         version="3.2.64"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.smapi"
          download-size="7"
          install-size="7"
-         version="1.0.63"
+         version="1.0.64"
          unpack="false"/>
 
    <plugin
          id="com.ibm.watson.smapifier"
          download-size="10"
          install-size="10"
-         version="1.0.63"
+         version="1.0.64"
          unpack="false"/>
 
    <plugin
@@ -55,21 +55,21 @@
          id="org.eclipse.imp.xform"
          download-size="178"
          install-size="178"
-         version="1.0.63"
+         version="1.0.64"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.imp.analysis"
          download-size="136"
          install-size="136"
-         version="1.0.63"
+         version="1.0.64"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.imp.lpg.runtime"
          download-size="461"
          install-size="461"
-         version="1.0.63"
+         version="1.0.65"
          unpack="false"/>
 
 </feature>
