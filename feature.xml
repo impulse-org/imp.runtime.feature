@@ -31,14 +31,14 @@
          unpack="false"/>
 
    <plugin
-         id="com.ibm.watson.smapi"
+         id="org.eclipse.imp.smapi"
          download-size="7"
          install-size="7"
          version="1.0.66"
          unpack="false"/>
 
    <plugin
-         id="com.ibm.watson.smapifier"
+         id="org.eclipse.imp.smapifier"
          download-size="10"
          install-size="10"
          version="1.0.66"
