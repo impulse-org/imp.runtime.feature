@@ -23,8 +23,8 @@
 		<copy todir="plugins" file="../com.ibm.wala.shrike/com.ibm.wala.shrike_1.0.0.jar"/>
 		<copy todir="plugins" file="../org.eclipse.imp.runtime/org.eclipse.imp.runtime_${plugins.version.32}.jar"/>
 		<copy todir="plugins" file="../org.eclipse.imp.lpg.runtime/org.eclipse.imp.lpg.runtime_${plugins.version.31}.jar"/>
-		<copy todir="plugins" file="../com.ibm.watson.smapi/com.ibm.watson.smapi_${plugins.version.31}.jar"/>
-		<copy todir="plugins" file="../com.ibm.watson.smapifier/com.ibm.watson.smapifier_${plugins.version.31}.jar"/>
+		<copy todir="plugins" file="../org.eclipse.imp.smapi/org.eclipse.imp.smapi_${plugins.version.31}.jar"/>
+		<copy todir="plugins" file="../org.eclipse.imp.smapifier/org.eclipse.imp.smapifier_${plugins.version.31}.jar"/>
 		<copy todir="plugins" file="../org.eclipse.imp.xform/org.eclipse.imp.xform_${plugins.version.31}.jar"/>
 		<copy todir="plugins" file="../org.eclipse.imp.analysis/org.eclipse.imp.analysis_${plugins.version.31}.jar"/>
 	</target>
@@ -39,13 +39,13 @@
 
 	<target name="build.smapi" depends="build.shrike">
 		<antcall target="build.child">
-			<param name="plugin.id" value="com.ibm.watson.smapi"/>
+			<param name="plugin.id" value="org.eclipse.imp.smapi"/>
 		</antcall>
 	</target>
 
 	<target name="build.smapifier" depends="build.smapi,build.imp.runtime">
 		<antcall target="build.child">
-			<param name="plugin.id" value="com.ibm.watson.smapifier"/>
+			<param name="plugin.id" value="org.eclipse.imp.smapifier"/>
 		</antcall>
 	</target>
 
