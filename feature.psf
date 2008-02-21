@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+    <provider id="org.tigris.subversion.subclipse.core.svnnature">
+        <project reference="0.9.3,https://wala.svn.sourceforge.net/svnroot/wala/trunk/com.ibm.wala.shrike,com.ibm.wala.shrike"/>
+    </provider>
+    <provider id="org.eclipse.team.cvs.core.cvsnature">
+        <project reference="1.0,:extssh:eclipse-imp.cvs.sourceforge.net:/cvsroot/eclipse-imp,org.eclipse.imp.xform,org.eclipse.imp.xform"/>
+        <project reference="1.0,:extssh:eclipse-imp.cvs.sourceforge.net:/cvsroot/eclipse-imp,org.eclipse.imp.analysis,org.eclipse.imp.analysis"/>
+        <project reference="1.0,:extssh:eclipse-imp.cvs.sourceforge.net:/cvsroot/eclipse-imp,org.eclipse.imp.smapi,org.eclipse.imp.smapi"/>
+        <project reference="1.0,:extssh:eclipse-imp.cvs.sourceforge.net:/cvsroot/eclipse-imp,org.eclipse.imp.runtime,org.eclipse.imp.runtime"/>
+        <project reference="1.0,:extssh:eclipse-imp.cvs.sourceforge.net:/cvsroot/eclipse-imp,org.eclipse.imp.lpg.runtime,org.eclipse.imp.lpg.runtime"/>
+        <project reference="1.0,:extssh:eclipse-imp.cvs.sourceforge.net:/cvsroot/eclipse-imp,org.eclipse.imp.smapifier,org.eclipse.imp.smapifier"/>
+    </provider>
+</psf>
