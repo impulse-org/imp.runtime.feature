@@ -20,13 +20,35 @@
 			<fileset dir="plugins" includes="*.jar"/>
 		</delete>
 		<mkdir dir="plugins"/>
-		<copy todir="plugins" file="../com.ibm.wala.shrike/com.ibm.wala.shrike_1.0.0.jar"/>
+		<antcall target="copy.child">
+			<param name="plugin.id" value="com.ibm.wala.shrike"/>
+		</antcall>
+		<antcall target="copy.child">
+			<param name="plugin.id" value="org.eclipse.imp.runtime"/>
+		</antcall>
+		<antcall target="copy.child">
+			<param name="plugin.id" value="org.eclipse.imp.lpg.runtime"/>
+		</antcall>
+		<antcall target="copy.child">
+			<param name="plugin.id" value="org.eclipse.imp.smapi"/>
+		</antcall>
+		<antcall target="copy.child">
+			<param name="plugin.id" value="org.eclipse.imp.smapifier"/>
+		</antcall>
+		<antcall target="copy.child">
+			<param name="plugin.id" value="org.eclipse.imp.xform"/>
+		</antcall>
+		<antcall target="copy.child">
+			<param name="plugin.id" value="org.eclipse.imp.analysis"/>
+		</antcall>
+<!--	<copy todir="plugins" file="../com.ibm.wala.shrike/com.ibm.wala.shrike_1.0.0.jar"/>
 		<copy todir="plugins" file="../org.eclipse.imp.runtime/org.eclipse.imp.runtime_${plugins.version.32}.jar"/>
 		<copy todir="plugins" file="../org.eclipse.imp.lpg.runtime/org.eclipse.imp.lpg.runtime_${plugins.version.31}.jar"/>
 		<copy todir="plugins" file="../org.eclipse.imp.smapi/org.eclipse.imp.smapi_${plugins.version.31}.jar"/>
 		<copy todir="plugins" file="../org.eclipse.imp.smapifier/org.eclipse.imp.smapifier_${plugins.version.31}.jar"/>
 		<copy todir="plugins" file="../org.eclipse.imp.xform/org.eclipse.imp.xform_${plugins.version.31}.jar"/>
 		<copy todir="plugins" file="../org.eclipse.imp.analysis/org.eclipse.imp.analysis_${plugins.version.31}.jar"/>
+  -->
 	</target>
 
 	<!-- ========================================================================================= -->
