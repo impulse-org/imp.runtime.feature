@@ -4,94 +4,46 @@
 	<import file="../org.eclipse.imp.update/buildFeatureCommon.xml"/>
 
 	<target name="init">
-		<property name="feature.name"        value="org.eclipse.imp.runtime"/>
+		<property name="feature.name"        value="${runtime.feature(id)}"/>
 		<property name="feature.version"     value="${runtime.version}"/>
 		<property name="feature.temp.folder" value="${basedir}/feature.temp.folder"/>
 		<property name="feature.destination" value="${basedir}"/>
+
+		<loadfile property="plugins.list" srcfile="feature.xml">
+			<filterchain>
+				<containsregex pattern="&lt;plugin"/>
+				<replaceregex pattern="[ \t]*&lt;plugin .* id=&quot;([^&quot;]*)&quot;.*" replace="\1,"/>
+				<tokenfilter>
+					<filetokenizer/>
+					<replaceregex pattern=",[\r\n]* *" replace="," flags="gs"/>
+				</tokenfilter>
+			</filterchain>
+		</loadfile>
+		<echo message="Feature contains the following plugins: ${plugins.list}"/>
 	</target>
 	
-	<target name="all.plugins"
-		depends="build.shrike,build.smapi,build.smapifier,build.imp.runtime,build.lpg.runtime,build.imp.xform,build.imp.analysis">
+	<target name="build.all.plugins" depends="init">
+		<for param="plugin.id" values="${plugins.list}">
+			<antcall target="build.child">
+				<param name="plugin.id" value="${plugin.id}"/>
+			</antcall>
+		</for>
+	</target>
+
+	<target name="echo.child">
+		<echo message="Processing ${plugin.id}"/>
 	</target>
 
 	<!-- RMF Copy the plugin jars to the 'plugins' folder so that exportUpdate script can see it -->
-	<target name="gather.plugin.jars" depends="all.plugins">
+	<target name="gather.plugin.jars" depends="build.all.plugins">
 		<delete failonerror="false">
 			<fileset dir="plugins" includes="*.jar"/>
 		</delete>
 		<mkdir dir="plugins"/>
-		<antcall target="copy.child">
-			<param name="plugin.id" value="com.ibm.wala.shrike"/>
-		</antcall>
-		<antcall target="copy.child">
-			<param name="plugin.id" value="org.eclipse.imp.runtime"/>
-		</antcall>
-		<antcall target="copy.child">
-			<param name="plugin.id" value="org.eclipse.imp.lpg.runtime"/>
-		</antcall>
-		<antcall target="copy.child">
-			<param name="plugin.id" value="org.eclipse.imp.smapi"/>
-		</antcall>
-		<antcall target="copy.child">
-			<param name="plugin.id" value="org.eclipse.imp.smapifier"/>
-		</antcall>
-		<antcall target="copy.child">
-			<param name="plugin.id" value="org.eclipse.imp.xform"/>
-		</antcall>
-		<antcall target="copy.child">
-			<param name="plugin.id" value="org.eclipse.imp.analysis"/>
-		</antcall>
-<!--	<copy todir="plugins" file="../com.ibm.wala.shrike/com.ibm.wala.shrike_1.0.0.jar"/>
-		<copy todir="plugins" file="../org.eclipse.imp.runtime/org.eclipse.imp.runtime_${plugins.version.32}.jar"/>
-		<copy todir="plugins" file="../org.eclipse.imp.lpg.runtime/org.eclipse.imp.lpg.runtime_${plugins.version.31}.jar"/>
-		<copy todir="plugins" file="../org.eclipse.imp.smapi/org.eclipse.imp.smapi_${plugins.version.31}.jar"/>
-		<copy todir="plugins" file="../org.eclipse.imp.smapifier/org.eclipse.imp.smapifier_${plugins.version.31}.jar"/>
-		<copy todir="plugins" file="../org.eclipse.imp.xform/org.eclipse.imp.xform_${plugins.version.31}.jar"/>
-		<copy todir="plugins" file="../org.eclipse.imp.analysis/org.eclipse.imp.analysis_${plugins.version.31}.jar"/>
-  -->
-	</target>
-
-	<!-- ========================================================================================= -->
-
-	<target name="build.shrike">
-		<antcall target="build.child">
-			<param name="plugin.id" value="com.ibm.wala.shrike"/>
-		</antcall>
-	</target>
-
-	<target name="build.smapi" depends="build.shrike">
-		<antcall target="build.child">
-			<param name="plugin.id" value="org.eclipse.imp.smapi"/>
-		</antcall>
-	</target>
-
-	<target name="build.smapifier" depends="build.smapi,build.imp.runtime">
-		<antcall target="build.child">
-			<param name="plugin.id" value="org.eclipse.imp.smapifier"/>
-		</antcall>
-	</target>
-
-	<target name="build.imp.runtime" depends="build.smapi">
-		<antcall target="build.child">
-			<param name="plugin.id" value="org.eclipse.imp.runtime"/>
-		</antcall>
-	</target>
-
-	<target name="build.lpg.runtime" depends="build.smapifier,build.imp.xform,build.imp.runtime">
-		<antcall target="build.child">
-			<param name="plugin.id" value="org.eclipse.imp.lpg.runtime"/>
-		</antcall>
-	</target>
-
-	<target name="build.imp.xform" depends="build.imp.runtime">
-		<antcall target="build.child">
-			<param name="plugin.id" value="org.eclipse.imp.xform"/>
-		</antcall>
-	</target>
-
-	<target name="build.imp.analysis" depends="build.imp.runtime">
-		<antcall target="build.child">
-			<param name="plugin.id" value="org.eclipse.imp.analysis"/>
-		</antcall>
+		<for param="plugin.id" values="${plugins.list}">
+			<antcall target="copy.child">
+				<param name="plugin.id" value="${plugin.id}"/>
+			</antcall>
+		</for>
 	</target>
 </project>
