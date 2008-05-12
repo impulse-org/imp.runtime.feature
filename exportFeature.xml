@@ -11,8 +11,18 @@
 
 		<loadfile property="plugins.list" srcfile="feature.xml">
 			<filterchain>
+				<!-- Sometimes the PDE splits <plugin> elements into several lines, but the
+				     subsequent filters assume the entire <plugin> element is all on one line. -->
+				<tokenfilter>
+					<filetokenizer/>
+					<replaceregex pattern="[ \t]*(&lt;plugin)[ \t\r\n]*" replace="\1 "/>
+				</tokenfilter>
+				<!-- Grab only the <plugin> elements from the feature manifest -->
 				<containsregex pattern="&lt;plugin"/>
-				<replaceregex pattern="[ \t]*&lt;plugin .* id=&quot;([^&quot;]*)&quot;.*" replace="\1,"/>
+				<!-- Grab the plugin ID from the <plugin> element -->
+				<replaceregex pattern="[ \t]*&lt;plugin .*id=&quot;([^&quot;]*)&quot;.*" replace="\1,"/>
+				<!-- Now concatenate all of the plugin IDs into a single comma-separated value, with
+				     no intervening line separators. The trailing comma seems to do no harm. -->
 				<tokenfilter>
 					<filetokenizer/>
 					<replaceregex pattern=",[\r\n]* *" replace="," flags="gs"/>
