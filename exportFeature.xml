@@ -15,7 +15,7 @@
 				     subsequent filters assume the entire <plugin> element is all on one line. -->
 				<tokenfilter>
 					<filetokenizer/>
-					<replaceregex pattern="[ \t]*(&lt;plugin)[ \t\r\n]*" replace="\1 "/>
+					<replaceregex pattern="[ \t]*(&lt;plugin)[ \t\r\n]*" replace="\1 " flags="gs"/>
 				</tokenfilter>
 				<!-- Grab only the <plugin> elements from the feature manifest -->
 				<containsregex pattern="&lt;plugin"/>
