@@ -10,7 +10,7 @@
     <property name="javacDebugInfo" value="on"/>
     <property name="javacVerbose" value="false"/>
 
-	<echo message="java.home = ${java.home}"/>
+    <echo message="java.home = ${java.home}"/>
     <echo message="ant.home = ${ant.home}"/>
 
     <!-- Following assumes we're invoking the build from within some plugin project's top-level directory -->
@@ -20,20 +20,20 @@
 
     <property name="runtime.version" value="${runtime.feature(version)}"/>
 
-	<condition property="mac.jre.path" value="${java.home}/../Classes">
-		<os family="mac"/>
-	</condition>
+    <condition property="mac.jre.path" value="${java.home}/../Classes">
+	<os family="mac"/>
+    </condition>
 
-	<echo message="mac.jre.path = ${mac.jre.path}"/>
+    <echo message="mac.jre.path = ${mac.jre.path}"/>
 
     <path id="path_bootclasspath">
-		<fileset dir="${mac.jre.path}">
-			<include name="*.jar"/>
-		</fileset>
+        <fileset dir="${mac.jre.path}">
+            <include name="*.jar"/>
+	</fileset>
         <fileset dir="${java.home}/lib">
             <include name="*.jar"/>
         </fileset>
-		<fileset dir="${ant.home}/lib">
+	<fileset dir="${ant.home}/lib">
             <include name="*.jar"/>
         </fileset>
     </path>
