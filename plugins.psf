@@ -3,6 +3,7 @@
 	<provider id="org.tigris.subversion.subclipse.core.svnnature">
 		<project reference="0.9.3,https://wala.svn.sourceforge.net/svnroot/wala/trunk/com.ibm.wala.shrike,com.ibm.wala.shrike"/>
 		<project reference="0.9.3,https://dev.eclipse.org/svnroot/technology/org.eclipse.imp/org.eclipse.imp.box/trunk,org.eclipse.imp.box"/>
+        <project reference="0.9.3,https://dev.eclipse.org/svnroot/technology/org.eclipse.imp/org.eclipse.imp.doc/trunk,org.eclipse.imp.doc"/>
 		<project reference="0.9.3,https://dev.eclipse.org/svnroot/technology/org.eclipse.imp/org.eclipse.imp.pdb/trunk,org.eclipse.imp.pdb"/>
 		<project reference="0.9.3,https://dev.eclipse.org/svnroot/technology/org.eclipse.imp/org.eclipse.imp.runtime/trunk,org.eclipse.imp.runtime"/>
 		<project reference="0.9.3,https://dev.eclipse.org/svnroot/technology/org.eclipse.imp/org.eclipse.imp.smapi/trunk,org.eclipse.imp.smapi"/>
