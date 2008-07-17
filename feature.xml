@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<feature id="org.eclipse.imp.runtime" image="eclipse_update_120.jpg" label="%featureName" provider-name="%providerName" version="0.1.78">
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<feature id="org.eclipse.imp.runtime" image="eclipse_update_120.jpg" label="%featureName" provider-name="%providerName" version="0.1.79">
 
    <description url="http://eclipse-imp.sourceforge.net/updates/">
       %description
@@ -17,18 +17,18 @@
       <import feature="lpg.runtime" match="greaterOrEqual" version="2.0.12"/>
    </requires>
 
-   <plugin download-size="430" id="org.eclipse.imp.runtime" install-size="430" unpack="false" version="0.1.78"/>
+   <plugin download-size="430" id="org.eclipse.imp.runtime" install-size="430" unpack="false" version="0.1.79"/>
 
-   <plugin download-size="7" id="org.eclipse.imp.smapi" install-size="7" unpack="false" version="0.1.76"/>
+   <plugin download-size="7" id="org.eclipse.imp.smapi" install-size="7" unpack="false" version="0.1.77"/>
 
-   <plugin download-size="10" id="org.eclipse.imp.smapifier" install-size="10" unpack="false" version="0.1.76"/>
+   <plugin download-size="10" id="org.eclipse.imp.smapifier" install-size="10" unpack="false" version="0.1.77"/>
 
    <plugin download-size="282" id="com.ibm.wala.shrike" install-size="282" unpack="false" version="1.1.3.qualifier"/>
 
-   <plugin download-size="178" id="org.eclipse.imp.xform" install-size="178" unpack="false" version="0.1.77"/>
+   <plugin download-size="178" id="org.eclipse.imp.xform" install-size="178" unpack="false" version="0.1.78"/>
 
-   <plugin download-size="0" id="org.eclipse.imp.pdb" install-size="0" unpack="false" version="0.1.4"/>
+   <plugin download-size="0" id="org.eclipse.imp.pdb" install-size="0" unpack="false" version="0.1.5"/>
 
-   <plugin download-size="0" id="org.eclipse.imp.doc" install-size="0" unpack="false" version="0.1.3"/>
+   <plugin download-size="0" id="org.eclipse.imp.doc" install-size="0" unpack="false" version="0.1.4"/>
 
 </feature>
