@@ -6,7 +6,7 @@
       provider-name="%providerName"
       image="eclipse_update_120.jpg">
 
-   <description url="http://eclipse-imp.sourceforge.net/updates/">
+   <description url="http://dev.eclipse.org/imp">
       %description
    </description>
 
@@ -19,8 +19,8 @@
    </url>
 
    <requires>
-      <import feature="lpg.runtime" version="2.0.12" match="greaterOrEqual"/>
-      <import feature="sdf_eclipse_installer_feature" version="1.0.9" match="greaterOrEqual"/>
+      <import feature="lpg.runtime" version="2.0.16" match="greaterOrEqual"/>
+      <import feature="sdf_eclipse_installer_feature" version="1.0.10" match="greaterOrEqual"/>
    </requires>
 
    <plugin
