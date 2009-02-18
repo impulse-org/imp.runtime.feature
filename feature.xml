@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.imp.runtime"
       label="%featureName"
-      version="0.1.89"
+      version="0.1.90"
       provider-name="%providerName"
       image="eclipse_update_120.jpg">
 
@@ -27,7 +27,7 @@
          id="org.eclipse.imp.runtime"
          download-size="430"
          install-size="430"
-         version="0.1.89"
+         version="0.1.90"
          unpack="false"/>
 
    <plugin
@@ -55,7 +55,7 @@
          id="org.eclipse.imp.xform"
          download-size="178"
          install-size="178"
-         version="0.1.88"
+         version="0.1.89"
          unpack="false"/>
 
    <plugin
