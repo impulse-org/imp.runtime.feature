@@ -6,7 +6,7 @@
       provider-name="%providerName"
       image="eclipse_update_120.jpg">
 
-   <description url="http://dev.eclipse.org/imp">
+   <description url="http://www.eclipse.org/imp">
       %description
    </description>
 
@@ -15,7 +15,7 @@
    </license>
 
    <url>
-      <update label="%updateSiteName" url="http://dev.eclipse.org/technology/imp/updates"/>
+      <update label="%updateSiteName" url="http://download.eclipse.org/technology/imp/updates"/>
    </url>
 
    <requires>
@@ -76,7 +76,7 @@
          id="org.eclipse.imp.box"
          download-size="0"
          install-size="0"
-         version="0.1.10"
+         version="0.1.11"
          unpack="false"/>
 
 </feature>
