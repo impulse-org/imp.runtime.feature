@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.imp.runtime"
       label="%featureName"
-      version="0.1.96"
+      version="0.1.97"
       provider-name="%providerName"
       image="eclipse_update_120.jpg">
 
@@ -20,28 +20,27 @@
 
    <requires>
       <import feature="lpg.runtime" version="2.0.16" match="greaterOrEqual"/>
-      <import feature="sdf_eclipse_installer_feature" version="1.0.10" match="greaterOrEqual"/>
    </requires>
 
    <plugin
          id="org.eclipse.imp.runtime"
          download-size="430"
          install-size="430"
-         version="0.1.96"
+         version="0.1.97"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.imp.smapi"
          download-size="7"
          install-size="7"
-         version="0.1.87"
+         version="0.1.88"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.imp.smapifier"
          download-size="10"
          install-size="10"
-         version="0.1.87"
+         version="0.1.88"
          unpack="false"/>
 
    <plugin
@@ -55,28 +54,14 @@
          id="org.eclipse.imp.xform"
          download-size="178"
          install-size="178"
-         version="0.1.89"
+         version="0.1.90"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.imp.doc"
          download-size="0"
          install-size="0"
-         version="0.1.14"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.imp.formatting"
-         download-size="0"
-         install-size="0"
-         version="0.1.11"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.imp.box"
-         download-size="0"
-         install-size="0"
-         version="0.1.11"
+         version="0.1.15"
          unpack="false"/>
 
 </feature>
