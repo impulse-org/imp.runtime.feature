@@ -26,21 +26,21 @@
          id="org.eclipse.imp.runtime"
          download-size="430"
          install-size="430"
-         version="0.1.97"
+         version="0.1.98"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.imp.smapi"
          download-size="7"
          install-size="7"
-         version="0.1.88"
+         version="0.1.89"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.imp.smapifier"
          download-size="10"
          install-size="10"
-         version="0.1.88"
+         version="0.1.89"
          unpack="false"/>
 
    <plugin
@@ -61,7 +61,7 @@
          id="org.eclipse.imp.doc"
          download-size="0"
          install-size="0"
-         version="0.1.15"
+         version="0.1.16"
          unpack="false"/>
 
 </feature>
