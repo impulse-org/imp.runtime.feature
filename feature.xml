@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.imp.runtime"
       label="%featureName"
-      version="0.1.103.qualifier"
+      version="0.1.104.qualifier"
       provider-name="%providerName"
       image="eclipse_update_120.jpg">
 
@@ -26,21 +26,21 @@
          id="org.eclipse.imp.runtime"
          download-size="430"
          install-size="430"
-         version="0.1.103.qualifier"
+         version="0.1.104.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.imp.xform"
          download-size="178"
          install-size="178"
-         version="0.1.91.qualifier"
+         version="0.1.93.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.imp.doc"
          download-size="0"
          install-size="0"
-         version="0.1.17.qualifier"
+         version="0.1.18.qualifier"
          unpack="false"/>
 
 </feature>
