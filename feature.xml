@@ -18,10 +18,6 @@
       <update label="%updateSiteName" url="http://download.eclipse.org/technology/imp/updates"/>
    </url>
 
-   <requires>
-      <import feature="lpg.runtime" version="2.0.18" match="greaterOrEqual"/>
-   </requires>
-
    <plugin
          id="org.eclipse.imp.runtime"
          download-size="430"
