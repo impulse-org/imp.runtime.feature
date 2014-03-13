@@ -29,18 +29,4 @@
          version="0.2.1.qualifier"
          unpack="false"/>
 
-   <plugin
-         id="org.eclipse.imp.xform"
-         download-size="178"
-         install-size="178"
-         version="0.2.1.qualifier"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.imp.doc"
-         download-size="0"
-         install-size="0"
-         version="0.2.1.qualifier"
-         unpack="false"/>
-
 </feature>
