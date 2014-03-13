@@ -4,7 +4,7 @@
 
 	<parent>
 		<relativePath>../imp.pom/pom.xml</relativePath>
-		<groupId>org.impulse</groupId>
+		<groupId>org.eclipse.imp</groupId>
 		<artifactId>org.eclipse.imp.pom</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
