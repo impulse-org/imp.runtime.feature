@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="imp.runtime.feature"
+      id="org.eclipse.imp.runtime.feature"
       label="IMP runtime"
       version="0.2.1.qualifier"
       image="eclipse_update_120.jpg">
