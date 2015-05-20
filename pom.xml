@@ -10,7 +10,7 @@
 	</parent>
 
 	<artifactId>imp.runtime.feature</artifactId>
-	<version>0.2.1.qualifier</version>
+	<version>0.3.0.qualifier</version>
 	<packaging>eclipse-feature</packaging>
 
 	<scm>

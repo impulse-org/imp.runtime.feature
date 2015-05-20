@@ -2,7 +2,7 @@
 <feature
       id="imp.runtime.feature"
       label="IMP runtime"
-      version="0.2.1.qualifier"
+      version="0.3.0.qualifier"
       image="eclipse_update_120.jpg">
 
    <description url="http://www.eclipse.org/imp">
@@ -21,7 +21,7 @@
          id="org.eclipse.imp.runtime"
          download-size="430"
          install-size="430"
-         version="0.2.1.qualifier"
+         version="0.3.0.qualifier"
          unpack="false"/>
 
 </feature>
